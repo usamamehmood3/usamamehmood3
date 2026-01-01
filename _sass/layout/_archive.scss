@@ -4,7 +4,6 @@
 
 .archive {
   margin-bottom: 2em;
-
   @include breakpoint($medium) {
     @include span(12 of 12);
   }
@@ -138,10 +137,10 @@
   @include breakpoint($medium) {
     margin-left: 0; /* reset before mixin does its thing*/
     margin-right: 0; /* reset before mixin does its thing*/
-    @include gallery(2.5 of 10);
+    @include gallery(4 of 10);
 
     .archive__item-teaser {
-      max-height: 120px;
+      max-height: 200;
     }
 
     .archive__item-excerpt {
@@ -241,5 +240,20 @@
         width: span(7 of 12);
       }
     }
+  }
+}
+
+.archive__category-title {
+  clear: both;         // ensures heading is above the grid
+  width: 100%;         // spans the container
+  margin: 2em 0 1em;   // spacing above/below
+  h2 {
+    margin: 0;
+    font-size: $type-size-4; // adjust as needed
+  }
+  hr {
+    border: none;
+    border-bottom: 1px solid var(--global-border-color);
+    margin-top: 0.25em;
   }
 }
